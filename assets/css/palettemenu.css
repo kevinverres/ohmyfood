@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/shrikhand-v11-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../font/shrikhand-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("../font/shrikhand-v11-latin-regular.woff2") format("woff2"), url("../font/shrikhand-v11-latin-regular.woff") format("woff"), url("../font/shrikhand-v11-latin-regular.ttf") format("truetype"), url("../font/shrikhand-v11-latin-regular.svg#Shrikhand") format("svg"); /* Legacy iOS */
+}
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    font-size: 30px;
+  }
+  header .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+  }
+  header .header-box a {
+    color: black;
+    text-decoration: none;
+  }
+  header .header-box p {
+    font-family: Shrikhand;
+  }
+  main .img-head {
+    background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 22em;
+  }
+  main .menu-box {
+    margin-top: -3rem;
+    padding: 15px;
+    background-color: white;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  main .menu-box .head-menu-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .menu-box .head-menu-box p {
+    font-family: Shrikhand;
+    font-size: x-large;
+  }
+  main .menu-box .head-menu-box i {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  main .menu-box .head-menu-box .icon-menu-box {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  main .menu-box .head-menu-box .icon-menu-box .heartnoanim {
+    z-index: 1;
+  }
+  main .menu-box .head-menu-box .icon-menu-box .heartanim {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+  }
+  main .menu-box .head-menu-box .icon-menu-box .heartanim:hover {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    background: -webkit-linear-gradient(-10deg, rgb(146, 86, 220), rgb(255, 121, 218));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  main .menu-box section {
+    margin-top: 20px;
+  }
+  main .menu-box section .title-menu {
+    position: relative;
+  }
+  main .menu-box section .title-menu::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    width: 2.5em;
+    left: 0px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #99e2d0;
+  }
+  main .menu-box section article {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+  }
+  main .menu-box section article .info-article {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 15px;
+    position: relative;
+    transition: all 2s;
+  }
+  main .menu-box section article .info-article:hover {
+    max-width: calc(100% - 110px);
+    transition: 0.7s ease-in-out;
+  }
+  main .menu-box section article .info-article:hover i {
+    transform: rotate(0deg);
+  }
+  main .menu-box section article .money {
+    display: flex;
+    align-items: flex-end;
+  }
+  main .menu-box section article .selected {
+    background-color: #99e2d0;
+    width: 5rem;
+    height: 100%;
+    position: absolute;
+    right: -80px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .menu-box section article .selected i {
+    font-size: 30px;
+    color: white;
+    transform: rotate(360deg);
+    transition: transform 1.5s;
+  }
+  main .menu-box section article .cut-text p {
+    white-space: nowrap;
+    width: 283px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .cut-text2 p {
+    white-space: nowrap;
+    width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+  main .btn-cmd-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 25px 0;
+  }
+  main .btn-cmd-box .btn-cmd {
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(-10deg, rgba(146, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+    width: 200px;
+    height: 50px;
+    border: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  main .btn-cmd-box .btn-cmd:hover {
+    scale: 1.05;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  }
+  footer {
+    background-color: rgb(63, 62, 62);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  footer span {
+    font-family: Shrikhand;
+    color: white;
+  }
+  footer .flex-icon-msg {
+    display: flex;
+    font-weight: 500;
+  }
+  footer .flex-icon-msg i {
+    margin-right: 10px;
+    scale: 0.8;
+  }
+  footer .flex-icon-msg .fa-handshake-angle {
+    width: 15px;
+  }
+}
+
+/*# sourceMappingURL=palettemenu.css.map */

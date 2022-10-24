@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* shrikhand-regular - latin */
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/shrikhand-v11-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../font/shrikhand-v11-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../font/shrikhand-v11-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../font/shrikhand-v11-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../font/shrikhand-v11-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../font/shrikhand-v11-latin-regular.svg#Shrikhand") format("svg"); /* Legacy iOS */
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    // border-bottom: black solid 3px;
+    height: 7vh;
+    font-size: 30px;
+    .header-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 300px;
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      p {
+        font-family: Shrikhand;
+      }
+    }
+  }
+  main {
+    .img-head {
+      background-image: url(../img/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 22em;
+    }
+    .menu-box {
+      margin-top: -3rem;
+      padding: 15px;
+      background-color: white;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      // border: black solid 3px;
+      .head-menu-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        p {
+          font-family: Shrikhand;
+          font-size: x-large;
+        }
+        i {
+          font-size: 25px;
+          cursor: pointer;
+        }
+        .icon-menu-box {
+          width: 25px;
+          height: 25px;
+          position: relative;
+          .heartnoanim {
+            z-index: 1;
+          }
+          .heartanim {
+            position: absolute;
+            opacity: 0;
+            z-index: 2;
+          }
+          .heartanim:hover {
+            // -webkit-animation: animateheart 500ms ease;
+            // animation: animateheart 500ms ease;
+            opacity: 1;
+            -webkit-transition-property: opacity;
+            -webkit-transition-duration: 1s;
+            -webkit-transition-delay: 0s;
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-delay: 0s;
+            // color: rgba(255, 121, 218, 1);
+            background: -webkit-linear-gradient(
+              -10deg,
+              rgba(146, 86, 220, 1),
+              rgba(255, 121, 218, 1)
+            );
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+        }
+      }
+      section {
+        margin-top: 20px;
+        .title-menu {
+          position: relative;
+        }
+        .title-menu::before {
+          content: "";
+          position: absolute;
+          bottom: -7px;
+          width: 2.5em;
+          left: 0px;
+          height: 3px;
+          border-radius: 2px;
+          background-color: #99e2d0;
+        }
+        article {
+          -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+          border-radius: 20px;
+          margin-top: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 100%;
+          .info-article {
+            max-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            padding: 15px;
+            position: relative;
+            transition: all 2s;
+          }
+          .info-article:hover {
+            max-width: calc(100% - 110px);
+            transition: 0.7s ease-in-out;
+          }
+          .info-article:hover i {
+            transform: rotate(0deg);
+          }
+          .money {
+            display: flex;
+            align-items: flex-end;
+          }
+          .selected {
+            background-color: #99e2d0;
+            width: 5rem;
+            height: 100%;
+            position: absolute;
+            right: -80px;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+              font-size: 30px;
+              color: white;
+              transform: rotate(360deg);
+              transition: transform 1.5s;
+            }
+          }
+          .cut-text {
+            p {
+              white-space: nowrap;
+              width: 283px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .cut-text2 {
+            p {
+              white-space: nowrap;
+              width: 230px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+        article:hover {
+          // scale: 1.05;
+          cursor: pointer;
+          -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+    .btn-cmd-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0 25px 0;
+      .btn-cmd {
+        border-radius: 25px;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(
+          -10deg,
+          rgba(146, 86, 220, 0.8),
+          rgba(255, 121, 218, 0.8)
+        );
+        width: 200px;
+        height: 50px;
+        border: transparent;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .btn-cmd:hover {
+        scale: 1.05;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  footer {
+    background-color: rgb(63, 62, 62);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    span {
+      font-family: Shrikhand;
+      color: white;
+    }
+    .flex-icon-msg {
+      display: flex;
+      font-weight: 500;
+      i {
+        margin-right: 10px;
+        scale: 0.8;
+      }
+      .fa-handshake-angle {
+        width: 15px;
+      }
+    }
+  }
+}
