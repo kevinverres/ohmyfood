@@ -137,8 +137,10 @@
             padding: 15px;
             position: relative;
             transition: all 2s;
+            border-radius: 20px;
           }
-          .info-article:hover {
+          .info-article:hover,
+          .info-article:focus {
             max-width: calc(100% - 110px);
             transition: 0.7s ease-in-out;
           }
