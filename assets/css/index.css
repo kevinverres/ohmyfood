@@ -22,7 +22,7 @@
     width: 100%;
     left: 0;
     top: 0;
-    animation: disable 0s ease;
+    animation: disable 3s ease;
     background-color: white;
     display: flex;
     align-items: center;
@@ -33,8 +33,8 @@
   }
   #loader {
     z-index: 2;
-    animation: spin 0s infinite;
-    -webkit-animation: spin 0s infinite;
+    animation: spin 2s infinite;
+    -webkit-animation: spin 2s infinite;
     width: 100%;
     display: flex;
     align-content: center;
@@ -53,10 +53,11 @@
   .home-animate-bottom {
     position: relative;
     -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 0s;
+    -webkit-animation-duration: 2s;
     animation-name: animatebottom;
-    animation-duration: 0s;
-    animation-delay: 0s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
   }
   header {
     -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
@@ -76,8 +77,7 @@
     padding: 1.5rem 7rem;
     background-color: rgba(0, 0, 0, 0.089);
   }
-  main .location p {
-    font-weight: 600;
+  main .location h4 {
     margin-left: 20px;
   }
   main .info {
@@ -106,12 +106,18 @@
     scale: 1.2;
     -webkit-box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(-10deg, rgba(146, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
   }
   main .fonction {
     padding: 20px;
   }
-  main .fonction .fonction-box {
+  main .fonction .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+  main .fonction .flex-wrap .fonction-box {
     border-radius: 25px;
     -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
@@ -122,10 +128,10 @@
     align-items: center;
     position: relative;
   }
-  main .fonction .fonction-box i {
+  main .fonction .flex-wrap .fonction-box i {
     margin-right: 20px;
   }
-  main .fonction .fonction-box .fonction-number {
+  main .fonction .flex-wrap .fonction-box .fonction-number {
     position: absolute;
     left: -12.5px;
     background-color: rgb(146, 86, 220);
@@ -137,17 +143,20 @@
     width: 25px;
     height: 25px;
   }
-  main .fonction .fonction-box:hover {
+  main .fonction .flex-wrap .fonction-box h4 {
+    font-weight: normal;
+  }
+  main .fonction .flex-wrap .fonction-box:hover {
     scale: 1.1;
     background-color: rgba(146, 86, 220, 0.068);
   }
-  main .fonction .fonction-box:hover i {
+  main .fonction .flex-wrap .fonction-box:hover i {
     color: rgb(146, 86, 220);
   }
-  main .fonction .fonction-box-active:last-child {
+  main .fonction .flex-wrap .fonction-box-active:last-child {
     background-color: rgba(146, 86, 220, 0.068);
   }
-  main .fonction .fonction-box-active:last-child i {
+  main .fonction .flex-wrap .fonction-box-active:last-child i {
     color: rgb(146, 86, 220);
   }
   main .restaurants {
@@ -192,17 +201,21 @@
     font-size: 25px;
     cursor: pointer;
   }
-  main .restaurants .card-restaurant .info-card-restaurant .heartnoanim {
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart {
+    width: 25px;
+    height: 25px;
     position: relative;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartnoanim {
     z-index: 1;
   }
-  main .restaurants .card-restaurant .info-card-restaurant .heartanim {
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim {
     position: absolute;
-    right: 15px;
+    right: 0px;
     z-index: 2;
     opacity: 0;
   }
-  main .restaurants .card-restaurant .info-card-restaurant .heartanim:hover {
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim:hover {
     opacity: 1;
     -webkit-transition-property: opacity;
     -webkit-transition-duration: 1s;
@@ -210,7 +223,7 @@
     transition-property: opacity;
     transition-duration: 1s;
     transition-delay: 0s;
-    background: -webkit-linear-gradient(-10deg, rgb(146, 86, 220), rgb(255, 121, 218));
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -248,6 +261,805 @@
   }
   footer .flex-icon-msg .fa-handshake-angle {
     width: 15px;
+  }
+  .fonction .flex-wrap {
+    justify-content: left;
+  }
+  .fonction .flex-wrap .fonction-box {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 898px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .pageLoader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: disable 3s ease;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    visibility: hidden;
+  }
+  #loader {
+    z-index: 2;
+    animation: spin 2s infinite;
+    -webkit-animation: spin 2s infinite;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  #loader img {
+    width: 120px;
+  }
+  #under-loader {
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    margin-top: -100px;
+    border-bottom: 3px solid blueviolet;
+  }
+  .home-animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  header {
+    -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+  }
+  header img {
+    width: 200px;
+  }
+  main .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 7rem;
+    background-color: rgba(0, 0, 0, 0.089);
+  }
+  main .location h4 {
+    margin-left: 20px;
+  }
+  main .info {
+    text-align: center;
+    padding: 2rem 0rem;
+    background-color: rgba(0, 0, 0, 0.048);
+  }
+  main .info p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  main .info input {
+    margin: 2rem 0rem;
+    border-radius: 25px;
+    padding: 1rem;
+    color: white;
+    border-color: transparent;
+    border-style: none;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    font-weight: 600;
+    scale: 1.1;
+  }
+  main .info input:hover {
+    scale: 1.2;
+    -webkit-box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  }
+  main .fonction {
+    padding: 20px;
+  }
+  main .fonction .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+  main .fonction .flex-wrap .fonction-box {
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    height: 4rem;
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  main .fonction .flex-wrap .fonction-box i {
+    margin-right: 20px;
+  }
+  main .fonction .flex-wrap .fonction-box .fonction-number {
+    position: absolute;
+    left: -12.5px;
+    background-color: rgb(146, 86, 220);
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+  }
+  main .fonction .flex-wrap .fonction-box h4 {
+    font-weight: normal;
+  }
+  main .fonction .flex-wrap .fonction-box:hover {
+    scale: 1.1;
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box:hover i {
+    color: rgb(146, 86, 220);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child {
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child i {
+    color: rgb(146, 86, 220);
+  }
+  main .restaurants {
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 40px 20px;
+  }
+  main .restaurants .card-restaurant {
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 20px;
+  }
+  main .restaurants .card-restaurant a {
+    color: black;
+    text-decoration: none;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant {
+    position: relative;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant img {
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99e2d0;
+    padding: 0.5rem;
+    color: #419b7d;
+    font-weight: 600;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant i {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartnoanim {
+    z-index: 1;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim {
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    opacity: 0;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim:hover {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  main .restaurants .card-restaurant:hover {
+    scale: 1.05;
+  }
+  footer {
+    background-color: rgb(63, 62, 62);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  footer span {
+    font-family: Shrikhand;
+    color: white;
+  }
+  footer .flex-icon-msg {
+    display: flex;
+    font-weight: 500;
+  }
+  footer .flex-icon-msg i {
+    margin-right: 10px;
+    scale: 0.8;
+  }
+  footer .flex-icon-msg .fa-handshake-angle {
+    width: 15px;
+  }
+  .fonction .flex-wrap {
+    justify-content: space-around;
+  }
+  .fonction .flex-wrap .fonction-box {
+    width: calc(100% - 500px);
+  }
+}
+@media (min-width: 899px) and (max-width: 1557px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .pageLoader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: disable 3s ease;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    visibility: hidden;
+  }
+  #loader {
+    z-index: 2;
+    animation: spin 2s infinite;
+    -webkit-animation: spin 2s infinite;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  #loader img {
+    width: 120px;
+  }
+  #under-loader {
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    margin-top: -100px;
+    border-bottom: 3px solid blueviolet;
+  }
+  .home-animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  header {
+    -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+  }
+  header img {
+    width: 200px;
+  }
+  main .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 7rem;
+    background-color: rgba(0, 0, 0, 0.089);
+  }
+  main .location h4 {
+    margin-left: 20px;
+  }
+  main .info {
+    text-align: center;
+    padding: 2rem 0rem;
+    background-color: rgba(0, 0, 0, 0.048);
+  }
+  main .info p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  main .info input {
+    margin: 2rem 0rem;
+    border-radius: 25px;
+    padding: 1rem;
+    color: white;
+    border-color: transparent;
+    border-style: none;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    font-weight: 600;
+    scale: 1.1;
+  }
+  main .info input:hover {
+    scale: 1.2;
+    -webkit-box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  }
+  main .fonction {
+    padding: 20px;
+  }
+  main .fonction .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+  main .fonction .flex-wrap .fonction-box {
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    height: 4rem;
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  main .fonction .flex-wrap .fonction-box i {
+    margin-right: 20px;
+  }
+  main .fonction .flex-wrap .fonction-box .fonction-number {
+    position: absolute;
+    left: -12.5px;
+    background-color: rgb(146, 86, 220);
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+  }
+  main .fonction .flex-wrap .fonction-box h4 {
+    font-weight: normal;
+  }
+  main .fonction .flex-wrap .fonction-box:hover {
+    scale: 1.1;
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box:hover i {
+    color: rgb(146, 86, 220);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child {
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child i {
+    color: rgb(146, 86, 220);
+  }
+  main .restaurants {
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 40px 20px;
+  }
+  main .restaurants .card-restaurant {
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 20px;
+  }
+  main .restaurants .card-restaurant a {
+    color: black;
+    text-decoration: none;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant {
+    position: relative;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant img {
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99e2d0;
+    padding: 0.5rem;
+    color: #419b7d;
+    font-weight: 600;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant i {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartnoanim {
+    z-index: 1;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim {
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    opacity: 0;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim:hover {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  main .restaurants .card-restaurant:hover {
+    scale: 1.05;
+  }
+  footer {
+    background-color: rgb(63, 62, 62);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  footer span {
+    font-family: Shrikhand;
+    color: white;
+  }
+  footer .flex-icon-msg {
+    display: flex;
+    font-weight: 500;
+  }
+  footer .flex-icon-msg i {
+    margin-right: 10px;
+    scale: 0.8;
+  }
+  footer .flex-icon-msg .fa-handshake-angle {
+    width: 15px;
+  }
+  .fonction .flex-wrap {
+    justify-content: space-around;
+  }
+  .fonction .flex-wrap .fonction-box {
+    justify-content: center;
+    width: calc(100% - 500px);
+  }
+  .restaurants .flex-wrap2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+  }
+  .restaurants .flex-wrap2 .card-restaurant {
+    width: calc(100% - 500px);
+  }
+}
+@media screen and (min-width: 1558px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .pageLoader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: disable 3s ease;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    visibility: hidden;
+  }
+  #loader {
+    z-index: 2;
+    animation: spin 2s infinite;
+    -webkit-animation: spin 2s infinite;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  #loader img {
+    width: 120px;
+  }
+  #under-loader {
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    margin-top: -100px;
+    border-bottom: 3px solid blueviolet;
+  }
+  .home-animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 2s;
+    animation-name: animatebottom;
+    animation-duration: 2s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  header {
+    -webkit-box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+  }
+  header img {
+    width: 200px;
+  }
+  main .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 7rem;
+    background-color: rgba(0, 0, 0, 0.089);
+  }
+  main .location h4 {
+    margin-left: 20px;
+  }
+  main .info {
+    text-align: center;
+    padding: 2rem 0rem;
+    background-color: rgba(0, 0, 0, 0.048);
+  }
+  main .info p {
+    font-size: 20px;
+    font-weight: 100;
+  }
+  main .info input {
+    margin: 2rem 0rem;
+    border-radius: 25px;
+    padding: 1rem;
+    color: white;
+    border-color: transparent;
+    border-style: none;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    font-weight: 600;
+    scale: 1.1;
+  }
+  main .info input:hover {
+    scale: 1.2;
+    -webkit-box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 2px -1px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  }
+  main .fonction {
+    padding: 20px;
+  }
+  main .fonction .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+  }
+  main .fonction .flex-wrap .fonction-box {
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.2);
+    height: 4rem;
+    margin: 1rem 0rem 0rem 1rem;
+    padding: 0rem 2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  main .fonction .flex-wrap .fonction-box i {
+    margin-right: 20px;
+  }
+  main .fonction .flex-wrap .fonction-box .fonction-number {
+    position: absolute;
+    left: -12.5px;
+    background-color: rgb(146, 86, 220);
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+  }
+  main .fonction .flex-wrap .fonction-box h4 {
+    font-weight: normal;
+  }
+  main .fonction .flex-wrap .fonction-box:hover {
+    scale: 1.1;
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box:hover i {
+    color: rgb(146, 86, 220);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child {
+    background-color: rgba(146, 86, 220, 0.068);
+  }
+  main .fonction .flex-wrap .fonction-box-active:last-child i {
+    color: rgb(146, 86, 220);
+  }
+  main .restaurants {
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 40px 20px;
+  }
+  main .restaurants .card-restaurant {
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 20px;
+  }
+  main .restaurants .card-restaurant a {
+    color: black;
+    text-decoration: none;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant {
+    position: relative;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant img {
+    width: 100%;
+    height: 170px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    object-fit: cover;
+  }
+  main .restaurants .card-restaurant .img-card-restaurant span {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99e2d0;
+    padding: 0.5rem;
+    color: #419b7d;
+    font-weight: 600;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant i {
+    font-size: 25px;
+    cursor: pointer;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart {
+    width: 25px;
+    height: 25px;
+    position: relative;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartnoanim {
+    z-index: 1;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim {
+    position: absolute;
+    right: 0px;
+    z-index: 2;
+    opacity: 0;
+  }
+  main .restaurants .card-restaurant .info-card-restaurant .box-heart .heartanim:hover {
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0s;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    background: linear-gradient(-10deg, rgb(147, 86, 220), rgb(255, 121, 218));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  main .restaurants .card-restaurant:hover {
+    scale: 1.05;
+  }
+  footer {
+    background-color: rgb(63, 62, 62);
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  footer span {
+    font-family: Shrikhand;
+    color: white;
+  }
+  footer .flex-icon-msg {
+    display: flex;
+    font-weight: 500;
+  }
+  footer .flex-icon-msg i {
+    margin-right: 10px;
+    scale: 0.8;
+  }
+  footer .flex-icon-msg .fa-handshake-angle {
+    width: 15px;
+  }
+  .fonction .flex-wrap {
+    justify-content: space-around;
+  }
+  .fonction .flex-wrap .fonction-box {
+    justify-content: center;
+    width: calc(100% - 1000px);
+  }
+  .restaurants .flex-wrap2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+  }
+  .restaurants .flex-wrap2 .card-restaurant {
+    width: calc(100% - 1000px);
   }
 }
 
