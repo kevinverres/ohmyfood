@@ -208,8 +208,13 @@
   }
   main .menu-box section article .info-article .cut-text3 {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .info-article .cut-text3 p, main .menu-box section article .info-article .cut-text3 h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .menu-box section article .info-article:hover,
 main .menu-box section article .info-article:focus {
@@ -517,8 +522,13 @@ main .menu-box section article .info-article:focus {
   }
   main .menu-box section article .info-article .cut-text3 {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .info-article .cut-text3 p, main .menu-box section article .info-article .cut-text3 h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .menu-box section article .info-article:hover,
 main .menu-box section article .info-article:focus {
@@ -826,8 +836,13 @@ main .menu-box section article .info-article:focus {
   }
   main .menu-box section article .info-article .cut-text3 {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .info-article .cut-text3 p, main .menu-box section article .info-article .cut-text3 h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .menu-box section article .info-article:hover,
 main .menu-box section article .info-article:focus {
@@ -1140,8 +1155,13 @@ main .menu-box section article .info-article:focus {
   }
   main .menu-box section article .info-article .cut-text3 {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .info-article .cut-text3 p, main .menu-box section article .info-article .cut-text3 h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .menu-box section article .info-article:hover,
 main .menu-box section article .info-article:focus {
@@ -1456,8 +1476,13 @@ main .menu-box section article .info-article:focus {
   }
   main .menu-box section article .info-article .cut-text3 {
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  main .menu-box section article .info-article .cut-text3 p, main .menu-box section article .info-article .cut-text3 h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   main .menu-box section article .info-article:hover,
 main .menu-box section article .info-article:focus {

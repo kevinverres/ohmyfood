@@ -243,9 +243,10 @@
             border-radius: 20px;
 
             .cut-text3 {
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              overflow: hidden;
+              @include cuttext;
+              p,h4 {
+                @include cuttext;
+              }
             }
           }
           .info-article:hover,
@@ -506,7 +507,7 @@
           }
         }
         .fonction-box:hover {
-          scale: 1.1;
+          scale: 1.05;
           background-color: rgba(146, 86, 220, 0.068);
           i {
             color: rgba(146, 86, 220, 1);
